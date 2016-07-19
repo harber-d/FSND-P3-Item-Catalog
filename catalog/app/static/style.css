@@ -1,0 +1,127 @@
+body {
+	background-color: #679ED2;
+	margin-top: 0;
+}
+
+body h3 {
+	margin: 0 0 0.75rem 0;
+}
+
+.banner_container {
+	background-color: #3E442B;
+}
+
+.banner {
+	display: flex;
+	justify-content: space-between;
+	height: 8rem;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.title {
+	display: flex;
+	height: 100%;
+	width: 50%;
+	align-items: center;
+	font-family: "Open Sans";
+	font-size: 3rem;
+	color: white;
+	vertical-align: middle;
+}
+
+.banner a {
+	color: white;
+}
+
+.profile_container {
+	display: flex;
+  height: 100%;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile_container h5 {
+	color: white;
+	margin-right: 2rem;
+}
+
+.profile_pic {
+	width: 30px;
+	height: 30px;
+	margin-right: 2rem;
+}
+
+.button_container {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#preview {
+  width: 90%;
+  height: 100%;
+}
+
+.items {
+	background-color: white;
+	border-radius: 4px;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.body_container {
+	font-family: "Open Sans";
+	padding: 2rem;
+	background-color: #D6EEFF;
+	height: 70rem;
+}
+.rss {
+	vertical-align: top;
+}
+
+.errors {
+	color: red;
+}
+.latest {
+	border-style: solid;
+	border-width: 0px 0px 0px 1px;
+	border-color: #DDDDDD;
+}
+
+.image_container {
+	float: left;
+	padding-right: 2rem;
+}
+
+.item_image {
+	max-width: 250px;
+}
+
+/* The following file upload Adapted from this blog post: 
+ * http://bit.ly/1UoF8jI 
+ */
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}

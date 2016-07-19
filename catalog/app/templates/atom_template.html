@@ -1,0 +1,5 @@
+{{ data|safe }}
+{% if item.image %}
+	<p><img class="item_image" src="{{ url_for('static', filename='img_store/'+item.image) }}"></p>
+{% endif %}
+<p>{{item.description}}</p>

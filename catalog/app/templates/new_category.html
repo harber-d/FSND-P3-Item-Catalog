@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="items col-sm-6 col-sm-push-3">
+		<h3>Add Category</h3>
+	  <form action="{{ url_for('add_category') }}" method="post" name="">
+	    {{form.csrf_token}}
+	    <p>Name:</p>
+	    <p>{{form.name(size=60)}}</p>
+	    <input type="submit" value="Create">
+	  </form>
+	</div>
+{% endblock %}

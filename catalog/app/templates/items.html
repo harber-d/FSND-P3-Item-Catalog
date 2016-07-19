@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+  <div class="items col-sm-8 col-sm-push-2">
+    <div class="col-sm-4 categories">
+        <h3>Categories
+          {% if 'user' in session %}
+            <a href="{{ url_for('new_category') }}"><span class="glyphicon glyphicon-plus"></span></a>
+          {% endif %}
+        </h3>
+      <ul class="nav nav-pills nav-stacked">
+    		{% for i in categories %}
+          <li role="presentation"><a href="{{ url_for('get_category',name=i.name) }}">{{i.name}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col-sm-4 latest">    
+    	<h3>Latest Items
+        {% if 'user' in session %}
+          <a href="{{ url_for('new_item') }}"><span class="glyphicon glyphicon-plus"></span></a>
+          <a href="{{ url_for('catalog_atom') }}"><img class="rss" src="{{ url_for('static', filename='rss.png') }}"></a>
+        {% endif %}
+      </h3>
+      <ul class="nav nav-pills nav-stacked">
+    		{% for i in latest_items %}
+    		   <li role="presentation"><a href="{{ url_for('item_detail', category_name=i.category.name, item_name=i.name) }}">{{i.name}} ({{i.category.name}})</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block head %}
+	{% if redirect_to_index %}
+		<meta http-equiv="refresh" content="2;URL={{url_for('get_items')}}">
+	{% endif %}
+{% endblock %}
+{% block body %}
+  <div class="items col-sm-6 col-sm-push-3">
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+    {% if not redirect_to_index %}
+      <a href="{{url_for('get_items')}}">Return to Catalog</a>
+    {% endif %}
+  </div>
+{% endblock %}
